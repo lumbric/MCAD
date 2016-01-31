@@ -82,7 +82,7 @@ module ovalTube(height, rx, ry, wall, center = false) {
 
 // size is the XY plane size, height in Z
 module hexagon(size, height) {
-  boxWidth = size/1.75;
+  boxWidth = (size / 2.) / cos(30.);
   for (r = [-60, 0, 60]) rotate([0,0,r]) cube([boxWidth, size, height], true);
 }
 
